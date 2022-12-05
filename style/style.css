@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* la navigation */
+header{
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    width: 20%;
+    /* margin-right: 20%; */
+}
+.nav_bar{
+    width: 100%;
+    min-height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 80px;
+}
+
+
+
+.btn_git{
+    margin: 40% 0 0 10%;
+    padding: 5px;
+    border-radius: 20px;
+}
+/* ecran moyen */
+@media screen and (max-width: 926px) {
+.nav_bar{
+    justify-content: space-between;
+    margin: 0 40px;
+}
+.btn_git{
+    margin: 60% 0 0 40%;
+}
+
+}
+/* Menu burger */
+@media screen and (max-width: 640px) {
+
+}
