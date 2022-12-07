@@ -5,9 +5,9 @@
 session_start();
 //  verifier que l'utilisateur avalider le formulaire. 
 if (isset($_POST['submit'])){
-    $login = $_POST['username'];
-    $password = $_POST['password'];
-    $co_password = $_POST['co_password'];
+    $login = strip_tags(trim($_POST['username']));
+    $password = strip_tags(trim($_POST['password']));
+    $co_password = strip_tags(trim($_POST['co_password']));
 
     //  Verifier que l'utilisateur a rempli tous les cases.
     if ($login && $password && $co_password){
