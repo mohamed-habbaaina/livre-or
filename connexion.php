@@ -35,7 +35,7 @@ if (isset($_POST['submit'])){
                 $_SESSION['id'] = $id;
 
                 // redirection vers la page 
-                header('location: commentaires.php')
+                header('location: commentaires.php');
             } else {
                 $err_pw_bd = 'Password Incorecte !';
             }

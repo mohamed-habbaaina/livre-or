@@ -7,5 +7,5 @@ if (!isset($_SESSION['login'])){
 }
 $login = $_SESSION['login'];
 $id = $_SESSION['id'];
-echo "$login le $id";
+
 ?>
