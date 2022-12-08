@@ -1,7 +1,12 @@
 <?php
-session_start();
 include 'includes/connect.php';
-
+// requette pour recupérer un tableau joiture id utilisateurs & id_utilisateur commentaire
+$requ_comm_all = $connection->query("SELECT login, commentaire, date FROM utilisateurs INNER JOIN commentaires ON utilisateurs.id = commentaires.id_utilisateur;");
+while ($comm_fetch = $requ_comm_all->fetch_assoc()){
+    $date = date_create($comm_fetch['date']);
+    $date = date_format($date,'d/m/Y');
+    $utilisateur = $comm_fetch['login'];
+    $comment = $comm_fetch['commentaire'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,14 +22,19 @@ include 'includes/connect.php';
          echo $_SESSION['login'];
      }?></p>
      <h3>Le livre d'Or</h3>
-     <table>
+      <table>    <!--  L'affichage du tableau  -->
         <thead>
             <th>Posté le</th>
             <th>Par l'Utilisateur</th>
             <th>Commentaire</th>
         </thead>
         <tbody>
-            <?php  ?>
+        <?php
+        echo '<tr>';
+        echo "<td>$date</td>";
+        echo "<td>$utilisateur</td>";
+        echo "<td>$comment</td>";
+    }?>
         </tbody>
      </table>
 </body>

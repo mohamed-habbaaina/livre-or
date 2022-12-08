@@ -25,7 +25,7 @@ if (isset($_GET['submit'])){
         $err_comm = 'Votre commentaire est trop court -Minimum 6 caractère!';
 }
 }
-
+//  ne foction pas
 if (isset($_GET['deconnect'])){
     echo 'cc';
 } 
