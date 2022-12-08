@@ -80,7 +80,10 @@ if (isset($_POST['submit'])){
             <h3>Connexion</h3>
 
             <label for="username">Login</label>
-            <input type="text" name="username" placeholder="<?= $login; ?>">
+            <input type="text" name="username" placeholder="<?php if (isset($login)) {
+                echo $login;
+            } else {
+                echo 'login';} ?>">
 
             <label for="password">Password</label>
             <input type="password" name="password" placeholder="Entre Votre Password">
