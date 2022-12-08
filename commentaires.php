@@ -13,22 +13,18 @@ if (isset($_GET['submit'])){
     require 'includes/connect.php';
 
     // le commentaire.
-    $commentaire = strip_tags(trim($_GET['commentaire']));
+    $commentaire = htmlspecialchars(strip_tags(trim($_GET['commentaire'])));
 
     $compt_len = strlen($commentaire);
     if ($compt_len > 6){
 
     //  recupirer la date du poste
-    $requ_inser = $connection->query("INSERT INTO `commentaires`(`commentaire`, `id_utilisateur`, `date`) VALUES ('$commentaire','$id',CURDATE());");
+    $requ_inser = $connection->query("INSERT INTO `commentaires`(`commentaire`, `id_utilisateur`, `date`) VALUES ('$commentaire','$id',NOW());");
     $mess_inser = 'Votre message est bien enregistré <a href="livre-or.php">"Livre d\'Or"</a> !';
 } else {
         $err_comm = 'Votre commentaire est trop court -Minimum 6 caractère!';
 }
 }
-//  ne foction pas
-if (isset($_GET['deconnect'])){
-    echo 'cc';
-} 
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -47,8 +43,8 @@ if (isset($_GET['deconnect'])){
         <ul class="nav_bar">
             <li><a href="index.php">Home</a></li>    
             <li><a href="livre-or.php"></a>Le Livre d'Or</li>    
-            <li><button type="submit" name="deconnect" class="btn_comm" id="deconnect"><a href="">Se Déconnecter</a></button></li>    
-            <li><button type="submit" name="modif" class="btn_comm"><a href="">Modifier Vous Information</a></button></li>    
+            <li><button class="btn_comm"><a href="includes/decconect.php">Se Déconnecter</a></button></li>    
+            <li><button class="btn_comm"><a href="includes/modif.php">Modifier Vous Information</a></button></li>    
         </ul>    
         <div class="burger">
             <div class="line1"></div>

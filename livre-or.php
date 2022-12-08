@@ -1,7 +1,7 @@
 <?php
 include 'includes/connect.php';
 // requette pour recupérer un tableau joiture id utilisateurs & id_utilisateur commentaire
-$requ_comm_all = $connection->query("SELECT login, commentaire, date FROM utilisateurs INNER JOIN commentaires ON utilisateurs.id = commentaires.id_utilisateur;");
+$requ_comm_all = $connection->query("SELECT login, commentaire, date FROM utilisateurs INNER JOIN commentaires ON utilisateurs.id = commentaires.id_utilisateur  ORDER BY date DESC;");
 while ($comm_fetch = $requ_comm_all->fetch_assoc()){
     $date = date_create($comm_fetch['date']);
     $date = date_format($date,'d/m/Y');
