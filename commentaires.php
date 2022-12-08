@@ -13,11 +13,17 @@ if (isset($_GET['submit'])){
     require 'includes/connect.php';
 
     // le commentaire.
-    $commentaire = $_GET['commentaire'];
+    $commentaire = strip_tags(trim($_GET['commentaire']));
+
+    $compt_len = strlen($commentaire);
+    if ($compt_len > 6){
 
     //  recupirer la date du poste
     $requ_inser = $connection->query("INSERT INTO `commentaires`(`commentaire`, `id_utilisateur`, `date`) VALUES ('$commentaire','$id',CURDATE());");
     $mess_inser = 'Votre message est bien enregistré <a href="livre-or.php">"Livre d\'Or"</a> !';
+} else {
+        $err_comm = 'Votre commentaire est trop court -Minimum 6 caractère!';
+}
 }
 
 if (isset($_GET['deconnect'])){
@@ -58,6 +64,9 @@ if (isset($_GET['deconnect'])){
         <p class="mess_inser"><?php
             if (isset($mess_inser)){
             echo $mess_inser;
+            }
+            if (isset($err_comm)){
+            echo $err_comm;
             }
             ?></p>
 

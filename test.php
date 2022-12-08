@@ -1,2 +1,3 @@
 <?php
-phpinfo();
+// phpinfo(); //    pour afichage de tout les info php
+
