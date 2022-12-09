@@ -42,7 +42,7 @@ if (isset($_GET['submit'])){
     <nav>
         <ul class="nav_bar">
             <li><a href="index.php">Home</a></li>    
-            <li><a href="livre-or.php"></a>Le Livre d'Or</li>    
+            <li><a href="livre-or.php">Le Livre d'Or</a></li>    
             <li><button class="btn_comm"><a href="includes/decconect.php">Se Déconnecter</a></button></li>    
             <li><button class="btn_comm"><a href="includes/profil.php">Modifier Vous Information</a></button></li>    
         </ul>    

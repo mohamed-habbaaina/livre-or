@@ -11,8 +11,10 @@ if (isset($_POST['submit'])){
     if (isset($_POST['nw_login']) && $_POST['password'] && $_POST['con_password']){
         if ($_POST['password'] === $_POST['con_password']){
 
+            //  Securisation des inputes 
             $nw_login = htmlspecialchars(strip_tags(trim($_POST['nw_login'])));
             $pasword = htmlspecialchars(strip_tags(trim($_POST['password'])));
+
             //hash password
             $password = password_hash($password, PASSWORD_DEFAULT, ['cost' => 12]);
 
