@@ -44,7 +44,7 @@ if (isset($_GET['submit'])){
             <li><a href="index.php">Home</a></li>    
             <li><a href="livre-or.php"></a>Le Livre d'Or</li>    
             <li><button class="btn_comm"><a href="includes/decconect.php">Se Déconnecter</a></button></li>    
-            <li><button class="btn_comm"><a href="includes/modif.php">Modifier Vous Information</a></button></li>    
+            <li><button class="btn_comm"><a href="includes/profil.php">Modifier Vous Information</a></button></li>    
         </ul>    
         <div class="burger">
             <div class="line1"></div>
