@@ -1,4 +1,28 @@
-<header>
+<?php
+if (isset($_SESSION['login'])){ ?>
+
+            <!-- header si login -->
+    <header>
+    <a href="index.php"><img src="" alt="logo" class="logo">LOGO</a>
+    <nav>
+        <ul class="nav_bar">
+            <li><a href="index.php">Home</a></li>    
+            <li><a href="livre-or.php">Le Livre d'Or</a></li>    
+            <li><button class="btn_comm"><a href="includes/decconect.php">Se Déconnecter</a></button></li>    
+            <li><button class="btn_comm"><a href="includes/profil.php">Modifier Vous Information</a></button></li>    
+        </ul>    
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <div class="line4"></div>
+        </div>
+    </nav>
+    </header>
+<?php } else { ?>
+
+        <!-- header si pas login -->
+    <header>
     <a href="index.php"><img src="" alt="logo" class="logo">LOGO</a>
     <nav>
         <ul class="nav_bar">
@@ -15,3 +39,4 @@
         </div>
     </nav>
 </header>
+<?php }?>
