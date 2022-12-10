@@ -37,23 +37,7 @@ if (isset($_GET['submit'])){
     <title>Commentaires</title>
 </head>
 <body>
-    <header>
-    <a href="index.php"><img src="" alt="logo" class="logo">LOGO</a>
-    <nav>
-        <ul class="nav_bar">
-            <li><a href="index.php">Home</a></li>    
-            <li><a href="livre-or.php">Le Livre d'Or</a></li>    
-            <li><button class="btn_comm"><a href="includes/decconect.php">Se Déconnecter</a></button></li>    
-            <li><button class="btn_comm"><a href="includes/profil.php">Modifier Vous Information</a></button></li>    
-        </ul>    
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-            <div class="line4"></div>
-        </div>
-    </nav>
-    </header>
+<?php require 'includes/header.php'; ?>
     <main>
     <div class="bienv"><p><?php echo "Bienvenue $login";?></p></div>
     <form action="#" type="get" class="form_comme">
@@ -63,6 +47,10 @@ if (isset($_GET['submit'])){
             }
             if (isset($err_comm)){
             echo $err_comm;
+            }
+            if (isset($_SESSION['change'])){
+            $mes_ch = $_SESSION['change'];
+            echo $mes_ch;
             }
             ?></p>
 

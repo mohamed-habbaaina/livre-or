@@ -29,8 +29,8 @@ if (isset($_POST['submit'])){
             // Requette update
             $requ_update = $connection->query("UPDATE `utilisateurs` SET `login`='$nw_login', `password`='$password' WHERE login='$login';");
             echo 'Vos Modifications Ont Bien été Enregistrées !';
-
-                header("refresh:3; url='../commentaires.php'"); // redirection vers la page commentaires. 
+                $_SESSION['change'] = 'vos modifications ont été pris en compte !';
+                header("location:../commentaires.php"); // redirection vers la page commentaires. 
             } else {
                 $err_logi = 'Le login n\'est pas disponible, Veuillez le changer !';
             }
