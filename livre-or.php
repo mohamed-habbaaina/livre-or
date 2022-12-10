@@ -3,6 +3,7 @@ session_start();
 include 'includes/connect.php';
 // requette pour recupérer un tableau joiture id utilisateurs & id_utilisateur commentaire
 $requ_comm_all = $connection->query("SELECT login, commentaire, date FROM utilisateurs INNER JOIN commentaires ON utilisateurs.id = commentaires.id_utilisateur  ORDER BY date DESC;");
+
 while ($comm_fetch = $requ_comm_all->fetch_assoc()){
     $date = date_create($comm_fetch['date']);
     $date = date_format($date,'d/m/Y');
@@ -58,9 +59,6 @@ if (isset($_SESSION['login'])) {
             $err_comm = 'Votre commentaire est trop court -Minimum 6 caractère!';
     }
     }
-    
-    
-    
     ?>
      <div class=commen_or>
     <form action="#" type="get" class="form_comme">
