@@ -1,4 +1,46 @@
-
+main{
+    height: 92vh;
+    width: 100vw;
+}
+.livre_or{
+width: 60vw;
+margin: auto;
+margin-top: 50px;
+}
+.livre_or h1{
+    margin: 0 0 20px 25%;
+}
+.livre_or table{
+    border: 3px solid black;
+}
+#com{
+    max-width: 50%
+}
+.livre_or th, td{
+    border: 2px solid black;
+    padding: 3px;
+    text-align: center;
+}
 .commen_or{
-    
+    max-width: 60vw;
+    margin: auto;
+    margin-top: 30px;
+
+}
+.commen_or p{
+    padding: 10px 0;
+}
+.commen_or input{
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    width: 55%;
+    margin: 5px 0;
+    border-radius: 8px;
+}
+#btn_com{
+    width: 10%;
+    margin: auto;
+    padding: 3px 8px;
+
 }

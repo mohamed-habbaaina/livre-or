@@ -77,7 +77,7 @@ if (isset($_POST['submit'])){
     ?></p>
     <h3>Modifier Vos Informations</h3>
     <form action="#" method="post">
-    <label for="login">Login</label>
+    <label for="nw_login">Login</label>
     <input type="text" name="nw_login" value="<?php echo $login ?>">
 
     <label for="password">Password</label>

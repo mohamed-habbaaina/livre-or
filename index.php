@@ -1,6 +1,9 @@
 <!-- MOHAMED HABBAAINA Le 05/12/2022
 
 -->
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>

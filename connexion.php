@@ -2,26 +2,23 @@
 session_start();
 if (isset($_POST['submit'])){
 
-    $login = strip_tags(trim($_POST['username']));
-    $password = strip_tags(trim($_POST['password']));
+    $login = htmlspecialchars(strip_tags(trim($_POST['username'])));
+    $password = htmlspecialchars(strip_tags(trim($_POST['password'])));
 
-    // echo "login is $login<br>";
 
     if (isset($login) && isset($password)){
 
         // Connexion a la BD.
         require 'includes/connect.php';
-        // echo 'connect<br>';
+
         // requette pour recupérer les données et verifier que l'utilisateur est bien enregistré dans la BD.
         $requ_ver = $connection->query("SELECT `id`, `login`, `password` FROM `utilisateurs` WHERE login='$login'");
         $log_ve = mysqli_num_rows($requ_ver);
-        // echo $log_ve . '<br>';
-        // var_dump($requ_ve);
-        // echo '<br>';
+;
         if ($log_ve > 0){
 
             //  verification du passwprd.
-            $requ_fetch = $requ_ver->fetch_array();
+            $requ_fetch = $requ_ver->fetch_assoc();
             // var_dump($requ_fetch);
             $password_BD = $requ_fetch['password'];
             // print_r(password_verify($password, $password_BD));
