@@ -80,17 +80,22 @@ footer{
 
 }
 /* ecran moyen */
-@media screen and (max-width: 926px) {
+@media screen and (max-width: 1024px) {
 .nav_bar{
     justify-content: space-between;
     margin: 0 40px;
 }
-.btn_git{
-    margin: 60% 0 0 40%;
-}
+.hom_bnv{
+    max-width: 60vw;
 
+}
+    
 }
 /* Menu burger */
 @media screen and (max-width: 640px) {
+.hom_bnv{
+    max-width: 80vw;
+
+}
 
 }
