@@ -6,8 +6,9 @@ main{
     height: 84vh;
 }
 .form{
-    background-color: red;
+    background-color: rgb(250, 204, 212);
     border-radius: 20px;
+    color: rgb(167, 131, 32);
 
 }
 .form form{
@@ -25,15 +26,19 @@ main{
     padding: 3px;
 }
 .form button{
-    width: 80px;
+    width: 100px;
     padding: 5px;
     border-radius: 20px;
     margin: auto;
     margin-top: 20px;
+    background-color: rgb(255, 83, 229);
+    color: white;
+    font-weight: bold;
 }
 .errs{
     /* background-color: aqua; */
     margin: 30px;
     padding-top: 5px;
     font-size: 20px;
+    color: red;
 }

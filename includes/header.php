@@ -3,7 +3,7 @@ if (isset($_SESSION['login'])){ ?>
 
             <!-- header si login -->
     <header>
-    <a href="index.php"><img src="" alt="logo" class="logo">LOGO</a>
+    <a href="index.php"><img src="img/logo.png" alt="logo" class="logo"></a>
     <nav>
         <ul class="nav_bar">
             <li><a href="index.php">Home</a></li>    
@@ -23,7 +23,7 @@ if (isset($_SESSION['login'])){ ?>
 
         <!-- header si pas login -->
     <header>
-    <a href="index.php"><img src="" alt="logo" class="logo">LOGO</a>
+    <a href="index.php"><img src="img/logo.png" alt="logo" class="logo"></a>
     <nav>
         <ul class="nav_bar">
             <li><a href="index.php">Home</a></li>    

@@ -88,5 +88,6 @@ $requ_comm_all = $connection->query("SELECT login, commentaire, date FROM utilis
         </div>
     <?php }?>
 </main>
+<?php include 'includes/footer.php' ?>
 </body>
 </html>
