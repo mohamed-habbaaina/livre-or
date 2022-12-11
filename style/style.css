@@ -40,12 +40,44 @@ header{
     margin: 0 80px;
 }
 
+/* btn if connection */
+.btn_comm{
+    background-color: white;
+    padding: 2px 5px;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    border: 2px solid rgb(255, 83, 229);
 
+}
+.hom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+.hom h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.hom_bnv{
+max-width: 30vw;
+text-align: justify;
 
+}
+/* le footer */
+footer{
+    backdrop-filter: blur(10px);
+    min-height: 7vh;
+}
 .btn_git{
     margin: 10px 0 0 10%;
     padding: 5px;
-    border-radius: 20px;
+    border-radius: 15px;
+    background-color: white;
+    font-weight: bold;
+    border: 2px solid rgb(255, 83, 229);
+
 }
 /* ecran moyen */
 @media screen and (max-width: 926px) {
