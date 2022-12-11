@@ -79,6 +79,18 @@ footer{
     border: 2px solid rgb(255, 83, 229);
 
 }
+/* burger */
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+    height: 3px;
+    width: 25px;
+    background-color: rgb(167, 13, 177);
+    margin: 5px;
+}
+
 /* ecran moyen */
 @media screen and (max-width: 1024px) {
 .nav_bar{
@@ -92,10 +104,40 @@ footer{
     
 }
 /* Menu burger */
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 746px) {
 .hom_bnv{
     max-width: 80vw;
-
 }
 
+body{
+    overflow: hidden;
+    } 
+
+
+
+.nav_bar{
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 1s ease-in;
+
+}
+.burger{
+    display: block;
+}
+.nav-active{
+    transform: translateX(0%);
+}
+
+
+
+.nav-active{
+    transform: translateX(0%);
+}
 }

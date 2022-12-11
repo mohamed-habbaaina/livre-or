@@ -33,5 +33,6 @@ session_start();
 </main>
 
 <?php include 'includes/footer.php' ?>
+<script src="js.js"></script>
 </body>
 </html>
