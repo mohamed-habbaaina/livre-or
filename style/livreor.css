@@ -6,12 +6,14 @@ main{
 width: 60vw;
 margin: auto;
 margin-top: 50px;
+backdrop-filter: blur(10px);
 }
 .livre_or h1{
-    margin: 0 0 20px 20%;
+    margin: 20px 0 30px 40%;
 }
 .livre_or table{
     border: 3px solid black;
+    margin: auto;
 }
 #com{
     max-width: 50%
