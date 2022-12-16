@@ -54,7 +54,7 @@ $requ_comm_all = $connection->query("SELECT login, commentaire, date FROM utilis
             require 'includes/connect.php';
         
             // le commentaire.
-            $commentaire = htmlspecialchars(strip_tags(trim($_GET['commentaire'])));
+            $commentaire = addslashes(htmlspecialchars($_GET['commentaire']));
         
             $compt_len = strlen($commentaire);
             if ($compt_len > 6){

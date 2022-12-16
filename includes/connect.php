@@ -12,4 +12,4 @@
         // $database = 'mohamed-habbaaina_livreor';
         
         // Ce connecter a la base de données "utilisateurs"
-        $connection = new mysqli($servername, $user_name, $password_b, $database) or die('Erreur');
+        $connection = new mysqli($servername, $user_name, $password_b, $database) ; //or die('Erreur');
